@@ -26,3 +26,35 @@ public class Main {
     }
   }
 }
+
+
+
+// Homework Nr.1 - Create a triangle that is made of _ symbol
+
+import java.util.Scanner;
+
+public class Main {
+  public static void main(String[] args) {
+
+    // Askins for user input
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("Write a number: ");
+    int a = scanner.nextInt();
+    scanner.close();
+
+    String triangle = "-";
+
+    for (int i = 1; i <=a; i++) {
+      System.out.println(triangle);
+        triangle = triangle + "-";
+    }
+    
+  }
+
+}
+
+
+
+
+
+
