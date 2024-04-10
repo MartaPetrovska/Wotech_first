@@ -1,3 +1,4 @@
+// Teamwork - story using scanner class
 import java.util.Scanner;
 
 public class Main {
@@ -22,4 +23,25 @@ public class Main {
     scan.close();
   }
 
+}
+
+
+
+
+//Oskars example for Scanner class
+
+import java.util.Scanner;
+
+public class Main {
+  public static void main(String[] args) {
+
+    Scanner scanner = new Scanner(System.in); //Opening a channel
+
+    int number; //number = 7
+    number = scanner.nextInt(); // Waits for us to provide an integer
+    System.out.println("This is the provided number:" + number);
+
+    scanner.close(); // Closing the channel
+    //scanner.nextLine(); // Waits for us to provide a string until pressed enter 
+  }
 }
