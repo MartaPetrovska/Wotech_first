@@ -55,6 +55,41 @@ public class Main {
 
 
 
+// Homework Nr.2 - Guess a number
 
+import java.util.Scanner;
+
+public class Main {
+  public static void main(String[] args) {
+
+    int myNumber = 24;
+
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("Guess a number inbetween 0 to 100: ");
+    int guessedNumber = scanner.nextInt();
+    scanner.nextLine();
+
+
+    //While loop is repeated until the user guesses the correct number.
+    while (guessedNumber != myNumber) {
+      if (guessedNumber < myNumber) {
+        System.out.println("Your guess is too low. Please try again.");
+      } else {
+        System.out.println("Your guess is too high. Please try again.");
+      }
+
+      // Asking for user input if guessed value was incorrect (while loops starts again )
+      guessedNumber = scanner.nextInt(); 
+      scanner.nextLine();
+
+    }
+
+    System.out.println("You guessed the correct number!");
+
+    scanner.close();
+
+  }
+
+}
 
 
