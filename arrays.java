@@ -11,7 +11,7 @@ public class Main {
     System.out.println(arr[i]);
     }
 
-    int sum = null;
+    int sum = 0;
 
     for (int i = 0; i < arr.length; i++){
       sum = sum + arr[i];
@@ -50,4 +50,47 @@ public class Main {
     arrayInput.close();
     
   }
+}
+
+// Fill the party list with people you would like to invite to the party and check if corresponding person is invited.
+
+import java.util.Scanner;
+public class Main {
+  public static void main(String[] args) {
+    Scanner arrayInput = new Scanner(System.in);  
+    
+    String[] array = new String[5];
+
+    System.out.println("Enter 5 names: ");
+    for (int i = 0; i < array.length; i++) {
+      array[i] = arrayInput.nextLine();
+    }
+
+    System.out.println("The names you entered are: ");
+    for (int i = 0; i < array.length; i++) {
+    System.out.println(array[i]);
+    }
+
+    System.out.println("Name You want to check: ");
+    String name = arrayInput.nextLine();
+
+    boolean isFound = false;
+    
+    for (int i = 0; i < array.length; i++) {
+      if (array[i].equals(name)) {
+        isFound = true;
+        break;
+      }
+    }
+
+    if (isFound) {
+      System.out.println("Name is found");
+    } else {
+      System.out.println("Name is not found");
+    }
+
+    arrayInput.close();
+    
+  }
+
 }
