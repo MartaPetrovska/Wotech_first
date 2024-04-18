@@ -155,3 +155,35 @@ public class Main {
     }
   }
 }
+
+
+// Finding number in array
+
+import java.util.Scanner;
+
+public class Main {
+  public static void main(String[] args) {
+    Scanner myObj = new Scanner(System.in);
+    int[] numbers = {1,5,2,8,4,5,6,7,8,9,10};
+    System.out.println("Please write Your favorite number: ");
+    int favoriteNumber = myObj.nextInt();
+
+    boolean isFound = false;
+
+    for (int i = 0; i < numbers.length; i++) {
+      if (numbers[i] == favoriteNumber) {
+        isFound = true;
+        break;
+      } 
+    }
+
+    if(isFound) {
+       System.out.println("Your favorite number is in the array");
+    } else {
+       System.out.println("Your favorite number is not in the array");
+    }
+    
+  }
+
+  
+}
