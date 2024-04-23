@@ -94,3 +94,33 @@ public class Main {
   }
 
 }
+
+
+
+
+//Given an array of integers, write a Java program to find the maximum sum of two integers in the array.
+
+public class Main {
+  public static void main(String[] args) {
+    int[] arr = new int[5]; 
+
+    for (int i = 0; i < arr.length; i++){
+    int randomNum = (int)(Math.random() * 101);
+    arr[i] = randomNum;
+    System.out.println(arr[i]);
+    }
+
+    int sum = 0; 
+
+    for (int i = 0; i < arr.length; i++){
+      for (int j = i + 1; j < arr.length; j++) {
+        if (arr[i] + arr[j] > sum) {
+          sum = arr[i] + arr[j];
+        }
+      }
+    }
+      
+    System.out.println(sum);
+  }
+
+}
