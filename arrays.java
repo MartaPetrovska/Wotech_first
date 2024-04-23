@@ -124,3 +124,74 @@ public class Main {
   }
 
 }
+
+
+
+
+//Find the amount of different words in the array
+
+//1st example
+
+public class Main {
+  public static void main(String[] args) {
+    
+    String[] arr = {"Anna","Marta","Anna","Ieva", "Ieva"}; 
+
+    for (int i = 0; i < arr.length; i++){
+    System.out.println(arr[i]);
+    }
+
+    int sum = 0;
+
+    for (int i = 0; i < arr.length; i++){
+      for (int j = i + 1; j < arr.length; j++) {
+        if (arr[i].equals(arr[j])) {  
+          sum = sum + 1;
+        }
+      }
+    }
+      
+    System.out.println("There is " + (arr.length - sum) + " pairs of names");
+  }
+
+}
+
+
+//2nd example with printing out unique words.
+
+import java.util.ArrayList;
+public class Main {
+  public static void main(String[] args) {
+    
+    String[] arr = {"Anna","Marta","Anna","Ieva", "Ieva", "Lauma"}; 
+    ArrayList<String> names = new ArrayList<String>();
+
+    for (int i = 0; i < arr.length; i++){
+    System.out.println(arr[i]);
+    }
+
+    int sum = 0;
+
+    for (int i = 0; i < arr.length; i++){
+      boolean isFound = false;
+      for (int j = i + 1; j < arr.length; j++) {
+        if (arr[i].equals(arr[j])) {  
+          sum ++;
+          isFound = true;
+          break;
+        } 
+      }
+      
+      if (!isFound) {
+        names.add(arr[i]);
+      }
+    }
+      
+    System.out.println("There are " + (arr.length - sum) + " pairs of names.");
+    System.out.println("Unique names:");
+    for (String name : names) {
+        System.out.println(name);
+    }
+  }
+
+}
