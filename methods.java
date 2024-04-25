@@ -71,7 +71,7 @@ public class Main {
 
 
 
-// OOSKARS EXAMPLE 
+// EXAMPLE 
 
 public class Main {
   public static void main(String[] args) {
@@ -94,3 +94,70 @@ public class Main {
     }
   }
 }
+
+
+
+
+
+//Fill the party list with people you would like to invite to the party and check wether or not he is invited.
+
+import java.util.Scanner;
+
+public class Main {
+  public static void main(String[] args) {
+    
+    Scanner scanner = new Scanner(System.in);
+
+    String[] invitedPeople = arrayOfPeople(scanner, "Enter 5 invited people");
+
+    String name = nameToCheck(scanner, "Enter a name to check");
+    isInvated(name, invitedPeople);
+
+    String name2 = nameToCheck(scanner, "Enter 2nd name to check");
+    isInvated(name2, invitedPeople);
+
+    //printNames(invitedPeople);
+  }
+
+  //Method to ask user to add invited people
+  public static String[] arrayOfPeople(Scanner scanner, String label) {
+    System.out.println(label);
+    String[] array = new String[5];
+    for (int i = 0; i < array.length; i++) {
+            array[i] = scanner.nextLine();
+    }
+    return array;
+  }
+  
+  //Method to print out names
+  public static void printNames(String[] array) {
+    for (String person : array) {
+        System.out.println(person);
+    }
+  }
+
+  //Enter name to check if invited
+  public static String nameToCheck(Scanner scanner, String label) {
+    System.out.println(label);
+    return scanner.nextLine();
+  }
+
+  //Checking if name is in the invited list
+  public static void isInvated(String name, String[] array){
+    boolean isInvated = false;
+    for (int i = 0; i < array.length; i++)
+      if (array[i].equals(name)) {
+        isInvated = true;
+        System.out.println("The person is invited");
+        break;
+      }
+    if (isInvated == false) {
+      System.out.println("The person is not invited");
+    }
+    
+  }
+  
+    
+}
+
+
