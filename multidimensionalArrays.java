@@ -78,3 +78,75 @@ public class Main {
         }
     }
 }
+
+
+//Fill up the every second row/column with a number 1 (2 ways)
+//1st with two loops
+
+public class Main {
+    public static void main(String[] args) {
+        int[][] array = new int[5][5];
+
+      // for loop to add 1 to every 2nd column
+      for (int i = 0; i < array.length; i++) {
+        for (int j = 0; j < array[i].length; j += 2) {
+          array[i][j] = 1;
+        }
+      }
+      
+      // for loop to add 1 to every 2nd row
+      for (int i = 0; i < array.length; i += 2) {
+        for (int j = 0; j < array[i].length; j++) {
+          array[i][j] = 1;
+        }
+      }
+
+        for(int i = 0; i < array.length; i++){
+            for(int j = 0; j < array[i].length; j++){
+              if (array[i][j] < 10){
+                System.out.print(" " + array[i][j] + " ");
+              } else {
+                System.out.print(array[i][j] + " ");
+              }
+            }
+          System.out.println();
+        }
+    }
+}
+
+
+//2nd with modulus
+
+public class Main {
+  public static void main(String[] args) {
+
+
+    int[][] array = new int[5][5];
+
+    for (int i = 0; i < array.length; i++) {
+        for (int j = 0; j < array[i].length; j++) {
+            if (j%2 == 0 || i%2 == 0) {
+                array[i][j] = 1;
+            } else {
+                array[i][j] = 0;
+            }
+        }
+    }
+
+    for(int i = 0; i < array.length; i++){
+        for(int j = 0; j < array[i].length; j++){
+          if (array[i][j] < 10){
+            System.out.print(" " + array[i][j] + " ");
+          } else {
+            System.out.print(array[i][j] + " ");
+          }
+        }
+      System.out.println();
+    }
+
+  }
+}
+
+
+
+
